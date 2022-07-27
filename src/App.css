@@ -28,12 +28,17 @@
   display: flex;
   background-color: transparent;
   border-color: #49274A;
+  /* border: none; */
+  font-weight: 600;
+  color: #F4DECB;
   color: #76323F;
+  /* background-color: #76323F; */
   border-style: solid;
+  border-radius: 42px;
 }
 .profile-button:hover{
   color: #F4DECB;
-  border-color: #76323F;
+  /* border-color: #76323F; */
   font-weight: 600;
   background-color: #76323F;
 }
@@ -99,6 +104,21 @@
 .span-text{
   color: grey;
 }
+.text-email{
+  /* background-color: pink; */
+  font-weight: 600;
+  color: #49274A;
+  cursor: pointer;
+  text-align: left;
+  padding-left: 4px;
+}
+.email-container{
+  margin-bottom: 16px;
+  display: inline-table;
+}
+.email-col{
+  display: flex;
+}
 a, a:hover, a:focus, a:active {
   text-decoration: none;
   color: #49274A !important;
@@ -116,9 +136,14 @@ a, a:hover, a:focus, a:active {
   padding: 12px 24px;
   min-height: 148px;
   position: relative;
-  margin: 12px auto;
+  /* margin: 12px auto; */
+  height: 100%;
   margin-left: 12px;
   transform: all .4s;
+}
+.project-row > div{
+  /* row-gap: 20px; */
+  margin-bottom: 20px;
 }
 .text-bold{
   color: #76323F;
@@ -180,11 +205,14 @@ a, a:hover, a:focus, a:active {
   /* height: 100%; */
   width: 100%;
 }
-.project-card:hover .text-bold{
+.project-card-hover:hover .text-bold{
   color: #F4DECB;
 }
-.project-card:hover .text-description{
+.project-card-hover:hover .text-description{
   color: #F4DECB;
+}
+.project-card-hover{
+  cursor: pointer;
 }
 .project-card:hover{
   transform: scale(1.01);
@@ -229,7 +257,7 @@ a, a:hover, a:focus, a:active {
   outline: none;
   border: none;
   margin-bottom: 40px;
-  border-radius: 40px;
+  /* border-radius: 40px; */
 }
 .justify-between{
   display: flex;
@@ -240,7 +268,7 @@ a, a:hover, a:focus, a:active {
   opacity: .5;
   border: none;
   outline: none;
-  border-radius: 40px;
+  /* border-radius: 40px; */
   margin-bottom: 40px;
   
 }
@@ -287,6 +315,7 @@ a, a:hover, a:focus, a:active {
   margin-top: 12px;
   margin-right: 12px;
   cursor: pointer;
+  color: grey;
 }
 .contact-facebook:hover{
   color: #76323F;
@@ -296,6 +325,8 @@ a, a:hover, a:focus, a:active {
   margin-top: 12px;
   margin-right: 12px;
   cursor: pointer;
+  color: grey;
+
 }
 .contact-instagram:hover{
   color: #76323F;
@@ -380,6 +411,9 @@ a, a:hover, a:focus, a:active {
   }
   .profile-info{
     padding-top: 64px;
+  }
+  .job-card{
+    margin: auto;
   }
 }
 ::-webkit-scrollbar{

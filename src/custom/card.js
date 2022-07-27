@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 function Card({data,setmodal}) {
   return (
@@ -6,14 +6,14 @@ function Card({data,setmodal}) {
     onClick={() => {
         setmodal(true)
     }}
-    className={`project-card `}>
+    className={`project-card ${setmodal?'project-card-hover':''}`}>
         <p className='text-bold'>
             {data.name.toUpperCase()}
         </p>
         <p className='text-description'>
             {data.description}
         </p>
-        <div className='card-hover'></div>
+        {setmodal&&<div className='card-hover'></div>}
     </div>
   )
 }
