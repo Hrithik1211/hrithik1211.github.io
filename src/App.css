@@ -68,13 +68,12 @@
   background-color: #F4DECB;
   top: -100vh;
   visibility: hidden;
-  display: none;
   z-index: -1;
   transition: top 1s;
+  height: 0px;
 }
 .screen-container.screen{
   top: 0px;
-  display: block;
   visibility: visible;
   z-index: 1;
   min-height: 100vh;

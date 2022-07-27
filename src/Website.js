@@ -6,6 +6,7 @@ import Card from './custom/card';
 import JobCard from './custom/jobCard';
 import { database } from './Firebase';
 import { ref, set } from 'firebase/database';
+import { Link } from 'react-router-dom';
 const projectData = {
   1:{
     name:'Card Flip Game',
@@ -209,7 +210,7 @@ function Resume({val}){
           </div>
         </div>
       </div>
-      <div className='col-lg-7 projects-section align-self-center'>
+      {val==100&&<div className='col-lg-7 projects-section align-self-center'>
         <div className='row card-console project-row'>
           {Object.keys(skills).map((val,index) => (
             <div className='col-md-5 '>
@@ -219,7 +220,7 @@ function Resume({val}){
         </div>
       </div>
       
-      
+      }
       </div>
       {val==100 &&
       
