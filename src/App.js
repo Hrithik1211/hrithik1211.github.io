@@ -6,14 +6,12 @@ import Website from './Website';
 import DataResponseData from './custom/dataresponseData';
 function App() {
   return (
-    <div className="App">
       <BrowserRouter>
       <Routes>
         <Route path='/' element={<Website/>}/>
         <Route path='/dataResponseData' element={<DataResponseData/>}/>
       </Routes>
       </BrowserRouter>
-    </div>
   );
 }
 
