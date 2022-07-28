@@ -31,10 +31,10 @@ const projectData = {
       timeline:'Dec 2021 - Jan 2022',
       link:'https://sanskritshala.github.io/shloka.github.io/',
       details:{
-        1:'Developed the Front-end of a web-based platform which recommends Sanskrit Shlokas based on user search.',
-        2:'Worked on the frameworks like ReactJS for Front-end and Django and used zIndex based display features.',
-        3:'Integrated graph based visualiser to display the relationship between the searched and recommended shlokas.',
-        4:'Implemented interactive realtime word highligther to highlight similar words in same colors in purport of shlokas.'
+        1:'Developed the Front-end in REACT which recommends Sanskrit Shlokas from pre-processed data on search.',
+        2:'Used react-graph-vis package to graphically visualise relationship between searched & recommended shlokas.',
+        3:'Created an interactive realtime word highligther to highlight similar words in same colors in purport of shlokas.',
+        4:'Worked using z-index property of CSS to create a Tour of the Platform on first visit to the website.'
       }}
   },
   3:{
@@ -45,12 +45,11 @@ const projectData = {
       timeline:'June 2021',
       link:'',
       details:{
-        1:'Developed a discussion platform using React Native to create groups and post ideas.',
-        2:'Used Google Firebase for backend services such as Realtime Database, Cloud storage and Authentication.',
-        3:'Built the search bar with Autocomplete Suggestion to search for groups and join groups from the search results.',
-        4:'Implemented the unique username and unique group name features using the database.',
-        5:'Added the request permission functionality for private groups and its approval by group admin, for privacy.'
-      }
+        1:'Developed a discussion platform in React Native which allows to create groups and post ideas.',
+        2:'Used Google Firebase services like user Authentication, Realtime Database, and Cloud Storage.',
+        3:'Built the search bar with Autocomplete Suggestions to search and join groups from the search results.',
+        4:'Implemented the unique username and group name features using the Realtime Database.',
+        5:'Added features like private groups, commenting on posts, bookmarking the posts, updating the profile pic etc.'}
     }
     
   },
@@ -63,10 +62,9 @@ const projectData = {
       link:'',
       details:{
         1:'Developed an application in Java in Android Studio to download posts from instagram using the post link.',
-        2:'Used java library to get the HTML of the post then extracted the download link from it.',
-        3:'Implemented the viewing option to preview the images or the videos before downloading.',
-        4:'Added the functionality for downloading the images or videos using the link and then storing it on the device.'
-      }
+        2:'Used Java Ion library to get the HTML of the post then parsed the data to get download link.',
+        3:'Implemented the option to preview the images or the videos before downloading.',
+        4:'Added the functionality to download the images or videos using the link and then storing it on the device.'}
     }
   },
   5:{
@@ -91,7 +89,7 @@ const skills = {
   },
   2:{
     name:'Frameworks',
-    description:'ReactJs, React Native, NextJs, Flutter, jQuery, Jest, Bootstrap',
+    description:'ReactJs, React Native, NextJs, jQuery, Jest, Bootstrap',
     details:{}
   },
   3:{
@@ -201,7 +199,7 @@ function Resume({val}){
             onClick={() => {
               let link = document.createElement('a');
               link.href=require('../src/images/Hrithik_Sharma.pdf')
-              link.download='/'
+              link.download='Hrithik_Sharma_Resume.pdf'
               link.click()
             }}
             >
