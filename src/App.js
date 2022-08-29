@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Website from './Website';
 import DataResponseData from './custom/dataresponseData';
 function App() {
+  document.title = 'Hrithik Sharma'
   return (
       <BrowserRouter>
       <Routes>

@@ -9,6 +9,20 @@ import { ref, set } from 'firebase/database';
 import { Link } from 'react-router-dom';
 const projectData = {
   1:{
+    name:'TRACKING OF MICROPARTICLES IN COMPLEX MEDIA',
+    description:'Python Application to track micro-particles in video',
+    details:{
+      timeline:'Jul 2022 - Present',
+      details:{
+        1:'Created an application using Python to track the Janus particles and to identify their instantaneous normal vector in videos.',
+        2:'Used OpenCV library to process the extracted image frames using medianBlur, adaptiveThreshold, cvtColor functions.',
+        3:'Applied the Hough Transformation technique to detect the particles and equator lines on the particles.',
+        4:'Compiled the processed frames marked with normal vectors into a video along with the trajectory traced by every particle.',
+        5:'Implemented a generic algorithm to convert videos from Lab Frame of Reference to Particle Frame of Reference.'
+      }
+    }
+  },
+  2:{
     name:'Card Flip Game',
     description:'Created a memory-based Card Flip game in ReactJS in which player have to clear the board within time',
     details:{
@@ -16,14 +30,28 @@ const projectData = {
       timeline:'May 2022',
       link:'https://hrithik1211.github.io/cardflip/',
       details:{
-        1:'Developed a memory-based Card Flip game in React JS to clear the board in timed format',
+        1:'Developed a timed memory-based Card Flip game in React JS to clear the board in timed format',
         2:'Used perspective and transform property of CSS to create 3-D card Flip animation on hover and click',
         3:'Stored the data in Local Storage of the browser to maintain the stats of user based on the games played',
         4:'Created a dashboard to display the stats of the current game and also the previous stats of the player from the Local Storage'
       }
     }
   },
-  2:{
+  3:{
+    name:'Sanskritshala',
+    description:'Developed a platform which contains Sanskrit tools',
+    details:{
+      github:'https://github.com/sanskritshala/sanskritshala.github.io',
+      timeline:'Jan 2022 - Apr 2022',
+      link:'https://sanskritshala.github.io/',
+      details:{
+        1:'Developed the front-end in ReactJS for Sanskrit applications such as Shloka Recommendation, Dependency Parsing.',
+        2:'Created Dependency Parser which is an annotation tool to create gold standard data in semi-automated way.',
+        3:'Built Shloka Recommendation tool which recommends Sanskrit Shlokas from pre-processed data on search.',
+        4:'Created interactive realtime word highlighter and graphic visualizations between the searched and recommended shlokas.'
+      }}
+  },
+  4:{
     name:'Sholka Recommendation',
     description:'Developed Web Platform for Shloka Recommendation System Using ReactJS',
     details:{
@@ -37,7 +65,7 @@ const projectData = {
         4:'Worked using z-index property of CSS to create a Tour of the Platform on first visit to the website.'
       }}
   },
-  3:{
+  5:{
     name:'Idea Hive',
     description:'Developed a Mobile Application in REACT NATIVE for students to post and discuss queries in groups',
     details:{
@@ -45,15 +73,14 @@ const projectData = {
       timeline:'June 2021',
       link:'',
       details:{
-        1:'Developed a discussion platform in React Native which allows to create groups and post ideas.',
-        2:'Used Google Firebase services like user Authentication, Realtime Database, and Cloud Storage.',
-        3:'Built the search bar with Autocomplete Suggestions to search and join groups from the search results.',
-        4:'Implemented the unique username and group name features using the Realtime Database.',
-        5:'Added features like private groups, commenting on posts, bookmarking the posts, updating the profile pic etc.'}
+        1:'Developed a discussion platform in React Native which enables users to create groups, post content and discuss ideas.',
+        2:'Implemented the unique username feature using Realtime Database with multiple user authentication options.',
+        3:'Built the search bar with Autocomplete Suggestions and feature to create and join multiple public/private groups.',
+        4:'Added features like private groups, commenting on posts, bookmarking the posts, updating the profile pic etc.'}
     }
     
   },
-  4:{
+  6:{
     name:'Instaload',
     description:'Created an Android Application in Android Studio using JAVA to download Instagram posts using links',
     details:{
@@ -67,7 +94,7 @@ const projectData = {
         4:'Added the functionality to download the images or videos using the link and then storing it on the device.'}
     }
   },
-  5:{
+  7:{
     name:'Trucken',
     description:'Developed an Android Application in Android Studio for a Tranportation StartUp ',
     details:{
@@ -108,7 +135,7 @@ const education = {
     name:'B.Tech',
     college:'Indian Institute of Technology Kanpur',
     description:'Senior Undergraduate at IIT Kanpur\n CPI - 7.55',
-    details:'2019-Present'
+    details:'2019 - Present'
   },
   
   2:{
@@ -128,7 +155,24 @@ const education = {
 const experience = {
   1:{
     name:'Software Developer Intern',
-    college:'RIA insurance',
+    college:'GetRIA Technology',
+    moreDetails:'Received PPO',
+    work:{
+      name:'Software Developer Intern | GetRIA Technology' ,
+      details:{
+        timeline:'May 2022 - Jul 2022',
+      
+        details:{
+          1:'Received Pre-Placement Offer from GetRIA Technology based on performance towards the end of the internship',
+      2:'Collaborated with the front-end team to create Career Page and Job Portal in ReactJS as well as to expand test coverage.',
+      3:'Tested the dynamic features of the website by writing Unit and Integration Test cases using JEST and RTL.',
+      4:'Developed the Career Page and integrated it with the database to retrieve data with Search & Filter options for Job Search.',
+      5:'Built the Job Portal and integrated it with Google APIs to parse data to styled JSX directly from Google Docs and Sheets.',
+      6:'Created a timed format memory-based Card Flip game in ReactJS during the training week and hosted it on GitHub',
+    
+        },
+      }
+},
     description:'Joined the Company through College Internship Drive and was involved in Unit and Integration Testing Using Jest and RTL. Developed the Career Page and Job Posting Panel in React',
     details:'May \'22 - July \'22'
   },
@@ -136,12 +180,30 @@ const experience = {
   2:{
     name:'Software Developer Intern',
     college:'Dron Study',
+    work:{
+      
+      name:'Software Developer Intern | DronStudy' ,
+      details:{
+        timeline:'Jul 2020 - Aug 2020',
+      
+        details:{
+          1:'Developed a web-based Multi Level Marketing (MLM) Software using JavaScript, CSS and HTML.',
+          2:'Used backend services of Google Firebase for Realtime Database, Cloud Storage, and Authentication.',
+          3:'Created user portal interface based on their level in the marketing Tree and also their downline.',
+          4:'Implemented the level-based structure of Multi Level Marketing for commission calculation on sale of the product.'
+          
+        },
+      }
+},
     description:'Developed and hosted Multi Level Marketing Software with User Authentication using Google Firebase Authentication',
     details:'July \'20 - August \'20'
   },
   
 }
 function Resume({val}){
+  const [modal, setmodal] = useState(false)
+  const [pval, setpval] = useState(null)
+  console.log(pval)
   return (
     <div className={`screen-container ${val?'screen':''} Resume container-main`}>
       <div className='row'>
@@ -198,8 +260,8 @@ function Resume({val}){
             <div className='col-lg-6 col-md-4 download-button'
             onClick={() => {
               let link = document.createElement('a');
-              link.href=require('../src/images/Hrithik_Sharma.pdf')
-              link.download='Hrithik_Sharma_Resume.pdf'
+              link.href=require('../src/images/Hrithik Sharma.pdf')
+              link.download='Hrithik Sharma Resume.pdf'
               link.click()
             }}
             >
@@ -226,21 +288,23 @@ function Resume({val}){
       <h2 className='text-center text-heading'>
         Experience & Education
       </h2>
-        <div className='col-lg-5'>
+        <div className='col-lg-5 experience' onClick={() => {setmodal(!modal)}}>
           {
             Object.keys(experience).map((val,index) => (
-              <JobCard data={experience[val]}/>
+              <JobCard data={experience[val]} click={experience[val].work} setclick={setpval} />
             ))
           }
         </div>
         <div className='col-lg-5'>
           {
             Object.keys(education).map((val,index) => (
-              <JobCard data={education[val]}/>
+              <JobCard data={education[val]} click={education[val].work} setclick={setpval} />
             ))
           }
         </div>
       </div>}
+      {modal && <div onClick={() => {setmodal(!modal)}} style={{backgroundColor:'rgb(174, 182, 191, .5)',height:'100vh',width:'100vw',position:'fixed',top:0,left:0,zIndex:9999}} ><Modal val={pval} setmodal={setmodal}/></div> }
+ 
     </div>
   )
 }
@@ -261,7 +325,7 @@ function Projects({val}){
             </div>
         ))}
       </div>
-      {modal && <Modal val={pval} setmodal={setmodal}/>}
+      {modal && <div onClick={() => {setmodal(!modal)}} style={{backgroundColor:'rgb(174, 182, 191, .5)',height:'100vh',width:'100vw',position:'fixed',top:0,left:0,zIndex:9999}} ><Modal val={pval} setmodal={setmodal}/></div> }
     </div>
   )
 }
@@ -363,7 +427,7 @@ function Page({val}){
 }
 function Modal({val,setmodal}){
   return (
-    <div className={`modals col-md-8 col-sm-11`}>
+    <div onClick={(e) => {e.stopPropagation()}} className={`modals col-md-8 col-sm-11`}>
       <div className='project-details'>
         <h1 className='text-heading text-center'>
           {val.name}
@@ -374,12 +438,12 @@ function Modal({val,setmodal}){
             <span className='span-text'><FaLink/> : </span>
             {val.details.link}
           </div>}
-          <div style={{cursor:'pointer'}} onClick={() => {
+          {val.details.github?<div style={{cursor:'pointer'}} onClick={() => {
             window.open(val.details.github)
           }} className='col-lg-12 text-center'>
             <span className='span-text'><FaGithub/> : </span>
             {val.details.github}
-          </div>
+          </div>:<></>}
           <div className='col-lg-12 text-center'>
             {val.details.timeline}
           </div>
