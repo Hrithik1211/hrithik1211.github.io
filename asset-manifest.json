@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.3b2b0a7e.css",
-    "main.js": "/static/js/main.72b9c28e.js",
+    "main.css": "/static/css/main.42ff02ae.css",
+    "main.js": "/static/js/main.88cbe51f.js",
     "static/js/787.71e672d5.chunk.js": "/static/js/787.71e672d5.chunk.js",
-    "static/media/profilepic.jpg": "/static/media/profilepic.1bf3c297a748029adf7e.jpg",
-    "static/media/Hrithik Sharma.pdf": "/static/media/Hrithik Sharma.557b7d8c0b62858964d0.pdf",
+    "static/media/profilepic.jpg": "/static/media/profilepic.36420a612e331fc8faa6.jpg",
+    "static/media/Hrithik Sharma.pdf": "/static/media/Hrithik Sharma.809b58949618e9591b1a.pdf",
     "static/media/codechef.jpeg": "/static/media/codechef.eb562d5608df29314514.jpeg",
     "index.html": "/index.html",
-    "main.3b2b0a7e.css.map": "/static/css/main.3b2b0a7e.css.map",
-    "main.72b9c28e.js.map": "/static/js/main.72b9c28e.js.map",
+    "main.42ff02ae.css.map": "/static/css/main.42ff02ae.css.map",
+    "main.88cbe51f.js.map": "/static/js/main.88cbe51f.js.map",
     "787.71e672d5.chunk.js.map": "/static/js/787.71e672d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b2b0a7e.css",
-    "static/js/main.72b9c28e.js"
+    "static/css/main.42ff02ae.css",
+    "static/js/main.88cbe51f.js"
   ]
 }
